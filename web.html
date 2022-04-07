@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+
+class PranayEditor extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `<textarea id="pranayTextarea" onkeyup="textCounter(this,'count');"></textarea> `;
+  }
+}
+
+customElements.define('pranay-editor', PranayEditor);
+
+function textCounter(field,field2){
+	var countField = document.getElementById(field2);
+	countField.innerHTML=field.value.split(' ').filter((word) => { if (word !== '') return word   }).length;
+}
+
+
+</script>
+<pranay-editor></pranay-editor>
+<span id="count">0</span>
