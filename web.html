@@ -6,7 +6,8 @@
 
 class PranayEditor extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = `<textarea id="pranayTextarea" onkeyup="textCounter(this,'count');"></textarea> `;
+    this.innerHTML = `<textarea id="pranayTextarea" onkeyup="textCounter(this,'count');"></textarea><span id="count"> 0</span> `;
+	  
   }
 }
 
@@ -20,4 +21,3 @@ function textCounter(field,field2){
 
 </script>
 <pranay-editor></pranay-editor>
-<span id="count">0</span>
