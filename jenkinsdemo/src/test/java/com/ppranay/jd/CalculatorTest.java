@@ -20,11 +20,11 @@ public class CalculatorTest {
 
 	@Test
 	public void testSum() {
-		assertEquals(100, c.sum(10, 20, 30));
+		assertEquals(100, c.sum(10, 20, 30, 40));
 	}
 
 	@Test
 	public void testSquare() {
-		assertEquals(215, c.square(15));
+		assertEquals(225, c.square(15));
 	}
 }
